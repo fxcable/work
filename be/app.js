@@ -16,7 +16,8 @@ app.use(cookieParser());
 app.use(cors())
 app.use('/api', require('./routes/api'))
 
-app.use(express.static(path.join(__dirname, '../', 'fe', 'dist')));
+// app.use(express.static(path.join(__dirname, '../', 'fe', 'dist')));
+app.use(express.static(path.join(__dirname, 'view')));
 
 
 // catch 404 and forward to error handler
