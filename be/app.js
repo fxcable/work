@@ -39,20 +39,21 @@ app.use(function(err, req, res, next) {
 module.exports = app;
 
 
-// const mongoose = require('mongoose')
-var MongoClient = require('mongodb').MongoClient
-    , format = require('util').format;
+const mongoose = require('mongoose')
+// var mongoose = require('mongodb').mongoose
+//     , format = require('util').format;
 const User = require('./models/users')
 
 // mongoose.connect('mongodb://ip:11231123@192.168.1.60:27017/nemv', { useNewUrlParser: true, useUnifiedTopology: true }, (err) =>{
-  MongoClient.connect('mongodb://192.168.1.60:27017/nemv', (err) =>{
+  mongoose.connect('mongodb://192.168.1.60:27017/nemv', (err) =>{
   if (err) return console.error(err)
   console.log('congoose connected!')
+
   // User.deleteMany()
   //   .then(r => console.log(r))
   //     .catch(e => console.error(e))
 
-  // User.create({ name: '하하' })
+  // User.create({ name: '김하하' })
   // .then(r => console.log(r))
   // .catch(e => console.error(e))
 
